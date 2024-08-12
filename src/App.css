@@ -1,0 +1,160 @@
+.container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.status {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.drawing {
+  position: relative;
+}
+
+/* The Human/Hangman */
+.head {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 10px solid black;
+  position: absolute;
+  top: 50px;
+  right: -30px;
+}
+
+.body {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
+
+.right-arm {
+  width: 100px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 150px;
+  right: -100px;
+  transform: rotate(-30deg);
+  transform-origin: left bottom;
+}
+
+.left-arm {
+  width: 100px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  transform: rotate(30deg);
+  transform-origin: right bottom;
+}
+
+.right-leg {
+  width: 100px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 210px;
+  right: -90px;
+  transform: rotate(60deg);
+  transform-origin: left bottom;
+}
+
+.left-leg {
+  width: 100px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 210px;
+  right: 0px;
+  transform: rotate(-60deg);
+  transform-origin: right bottom;
+}
+
+/* The Stand */
+.dropdown {
+  height: 50px;
+  width: 10px;
+  background-color: black;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.overhang {
+  height: 10px;
+  width: 200px;
+  background-color: black;
+  margin-left: 120px;
+}
+
+.stand {
+  height: 400px;
+  width: 10px;
+  background-color: black;
+  margin-left: 120px;
+}
+
+.base {
+  height: 10px;
+  width: 250px;
+  background-color: black;
+}
+
+/* word */
+
+.word {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+/* keyboard */
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 0.5rem;
+}
+
+/* keys */
+.button-keys {
+  width: 100%;
+  border: 3px solid black;
+  background: none;
+  aspect-ratio: 1/1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.button-keys.active {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  cursor: default;
+}
+
+.button-keys.inactive {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button-keys:hover:not(:disabled),
+.button-keys:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
+}
