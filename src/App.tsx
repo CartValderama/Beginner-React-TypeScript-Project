@@ -84,7 +84,14 @@ function App() {
           <div className='status'>
             <p>Winner</p>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-              <button>Return Home</button>
+              <button
+                onClick={() => {
+                  window.location.href =
+                    'https://aquamarine-begonia-e3e1c3.netlify.app/'
+                }}
+              >
+                Return Home
+              </button>
               <button onClick={handlePlayAgain}>Play Again</button>
             </div>
           </div>
@@ -93,7 +100,14 @@ function App() {
           <div className='status'>
             <p>Loser</p>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-              <button>Return Home</button>
+              <button
+                onClick={() => {
+                  window.location.href =
+                    'https://aquamarine-begonia-e3e1c3.netlify.app/'
+                }}
+              >
+                Return Home
+              </button>
               <button onClick={handlePlayAgain}>Play Again</button>
             </div>
           </div>
