@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+### TypeScript Hangman Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a TypeScript-based React application designed to help you learn and practice TypeScript within a real-world scenario. The game follows the classic Hangman format, where players guess letters to uncover a hidden word, but with a strong emphasis on type safety and code reliability provided by TypeScript.
 
-Currently, two official plugins are available:
+#### Key Learning Objectives:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Type-Safe State Management**:
+   - Learn how to manage state with TypeScript, ensuring variables like the word to guess, score, and lives are correctly typed. This reduces bugs and improves code clarity.
 
-## Expanding the ESLint configuration
+2. **Typed Function Handling**:
+   - Understand how to define and work with functions that are strictly typed, particularly in scenarios involving user input, such as guessing letters. This helps prevent errors and makes the application more robust.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Component Prop Typing**:
+   - Practice creating and using typed React components. By enforcing types for props, you ensure that data passed between components is consistent and valid, leading to a more predictable and maintainable codebase.
 
-- Configure the top-level `parserOptions` property like this:
+4. **Enhanced Error Checking**:
+   - With TypeScript's strict mode enabled, experience how early error detection can improve development workflow, catching potential issues before they become bugs.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#### Application Flow:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Game Logic**: The game dynamically selects a random word, tracks the player's guesses, and updates the game state (score, lives, etc.) based on correct or incorrect guesses.
+- **User Interaction**: Players can guess letters using both a physical keyboard and an on-screen virtual keyboard, with TypeScript ensuring that all interactions are handled safely.
+- **End Conditions**: The game displays appropriate win/loss messages, and TypeScript ensures that the logic for these conditions is correctly implemented.
